@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+	
+<hibernate-mapping package="com.CommentPost">
+<class name="Comment" table="Comment">
+<id name="cid" column="commented_id" />
+
+<property name="com" column="comment" length="10"/>
+<property name="cby" column="comment_by" length="10"/>
+
+<many-to-one name="obj" column="fid" class="Post" cascade="all"/>
+
+</class>
+</hibernate-mapping>
+
+
+

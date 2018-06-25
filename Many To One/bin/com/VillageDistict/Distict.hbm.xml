@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.VillageDistict">
+
+<class name="Distict" table="distict">
+<id name="did" column="d_Id" />
+<property name="dname" column="d_name" length="10"/>
+</class>
+</hibernate-mapping>

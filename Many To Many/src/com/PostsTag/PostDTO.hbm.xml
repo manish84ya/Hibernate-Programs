@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.PostsTag">
+<class name="PostDTO" table="post">
+<id name="pid" column="p_id"/>
+<property name="ptitle" column="title"/>
+<property name="pdesc" column="post_desc"/>
+<property name="pdate" column="post_date"/>
+
+<set name="Tag" cascade="all" table="Post_tag">
+<key column="pid"/>
+<many-to-many class="TagDTO" column="tid"></many-to-many>
+</set>
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;First Lavel Cache/src&apos;&#x0D;&#x0A;- Original project: &apos;CacheImplementation&apos;&#x0D;&#x0A;- Destination element: &apos;First Lavel Cache/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     CustomerDTO.hbm.xml&#x0D;&#x0A;     hibernate.cfg.xml" description="Copy files" destination="=First Lavel Cache/src" element1="src/CustomerDTO.hbm.xml" element2="src/hibernate.cfg.xml" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1524805471975" units="0" version="1.0"/>
+</session>

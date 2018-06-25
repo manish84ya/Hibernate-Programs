@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.PersonAdhar">
+<class name="AdharDTO" table="uid">
+
+<id name="uid" column="uid"/>
+
+<property name="dob" column="dob" length="10"/>
+
+<property name="paddress" column="paddress" length="10"/>
+</class>
+</hibernate-mapping>

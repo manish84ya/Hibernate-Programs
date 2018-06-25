@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping>
+<class name="com.QuestionAnswer.Answers" table="Answer">
+
+<id name="id" column="a_id" />
+<property name="answername" column="q_name" length="10"/>
+<property name="postedBy" column="postedby" length="10"/>
+<property name="fid" column="fid" length="10"/>
+</class>
+</hibernate-mapping>
+

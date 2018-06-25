@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate Mapping DTD 3.0//EN"
+"D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.Table_Per_Subclass_Hierarchy">
+<class name="PaymentDTO" table="Payment_Subclass">
+<id name="PaymentID" column="PaymentID"></id>
+<property name="Amount" column="Amount"></property>
+
+<joined-subclass name="CreditCardDTO" table="Credit_Card_Subclass">
+<key column="dummy1"></key>
+<property name="CreditCardType" column="Credit_Card_Type"></property>
+</joined-subclass>
+
+<joined-subclass name="ChequeDTO" table="Cheque_Subclass">
+<key column="dummy2"></key>
+<property name="ChequeType" column="Cheque_type"></property>
+</joined-subclass>
+
+</class>
+</hibernate-mapping>

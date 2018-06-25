@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.LibraryBooks">
+<class name="BooksDTO" table ="B1">
+<id name="bid" column="bid"/>
+<property name="bname" column="bname"></property>
+<property name="btype" column="btype"></property>
+
+<many-to-one name="obj" column="fid" cascade="all"/>
+ </class>
+</hibernate-mapping>

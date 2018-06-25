@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.LockKeys">
+<class name="LockDTO" table="Lock1">
+
+<id name="lid" column="Lock_id" />
+<property name="lcname" column="Lock_cmpny_name" length="10"/>
+<property name="lnumofkey" column="Lock_num_of_keys" length="10"/>
+
+<set name="Child" cascade="all" inverse="true">
+ <key column="fid" />
+<one-to-many class="KeysDTO" />
+ </set>
+ </class>
+</hibernate-mapping>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate Mapping DTD 3.0//EN"
+"D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.AtmCust">
+<class name="CustDTO" table="AtmCust">
+<id name="cid" column="cust_id"></id>
+<property name="cname" column="cust_name"></property>
+<property name="cnumber" column="card_number"></property>
+<property name="cpin" column="card_pin"></property>
+
+<property name="fid"></property>
+</class>
+</hibernate-mapping>

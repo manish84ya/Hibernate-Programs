@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+          "D:/Programs/Hibernate/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+
+<property name = "connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name = "dialect">org.hibernate.dialect.MySQLDialect</property>
+<property name = "connection.url">jdbc:mysql://localhost:3306/one2manyBidirectional</property>
+<property name = "connection.username">root</property>
+<property name = "connection.password">root</property>
+<property name="show_sql">true</property>
+<property name="hbm2ddl.auto">update</property>  
+ 
+<mapping resource="com/VendorCustomer/Customer.hbm.xml"></mapping>
+<mapping resource="com/VendorCustomer/Vendor.hbm.xml"></mapping>
+
+<mapping resource="com/ClassStudent/ClassDTO.hbm.xml"></mapping>
+<mapping resource="com/ClassStudent/StudentDTO.hbm.xml"></mapping>
+
+<mapping resource="com/BookPages/BookDTO.hbm.xml"></mapping>
+<mapping resource="com/BookPages/PagesDTO.hbm.xml"></mapping>
+
+<mapping resource="com/UniversityCollege/UniversityDTO.hbm.xml"></mapping>
+<mapping resource="com/UniversityCollege/CollegeDTO.hbm.xml"></mapping>
+
+<mapping resource="com/StateDistict/StateDTO.hbm.xml"></mapping>
+<mapping resource="com/StateDistict/DistictDTO.hbm.xml"></mapping>
+
+<mapping resource="com/CompanyProduct/CompanyDTO.hbm.xml"></mapping>
+<mapping resource="com/CompanyProduct/ProductDTO.hbm.xml"></mapping>
+
+<mapping resource="com/CarParts/CarDTO.hbm.xml"></mapping>
+<mapping resource="com/CarParts/PartDTO.hbm.xml"></mapping>
+
+<mapping resource="com/LockKeys/LockDTO.hbm.xml"></mapping>
+<mapping resource="com/LockKeys/KeysDTO.hbm.xml"></mapping>
+
+<mapping resource="com/CarShowroom/Car1DTO.hbm.xml"></mapping>
+<mapping resource="com/CarShowroom/ShowroomDTO.hbm.xml"></mapping>
+
+<mapping resource="com/MoviesActor/MoviesDTO.hbm.xml"></mapping>
+<mapping resource="com/MoviesActor/Actor.hbm.xml"></mapping>
+
+<mapping resource="com/LibraryBooks/LibraryDTO.hbm.xml"></mapping>
+<mapping resource="com/LibraryBooks/BooksDTO.hbm.xml"></mapping>
+
+
+<mapping resource="com/SongsSinger/Songs.hbm.xml"></mapping>
+<mapping resource="com/SongsSinger/Singer.hbm.xml"></mapping>
+
+<mapping resource="com/QuestionAnswers/Question.hbm.xml"></mapping>
+<mapping resource="com/QuestionAnswers/Answer.hbm.xml"></mapping>
+
+</session-factory>
+</hibernate-configuration>
+
+
+
+
+

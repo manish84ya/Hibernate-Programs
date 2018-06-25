@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+
+<hibernate-mapping>
+<class name="com.TeacherClasses.Teacher" table="teacher">
+
+<id name="tid" column="t_id" />
+
+<property name="tname" column="t_name" length="10"/>
+
+<property name="tmob" column="t_mobile" length="10"/>
+
+<set name="child" cascade="all" >
+ <key column="fid" />
+<one-to-many class="com.TeacherClasses.Classes" />
+ </set>
+ 
+
+</class>
+</hibernate-mapping>
+

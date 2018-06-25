@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.UserProfile">
+<class name="Profile" table="profile">
+
+<id name="pid" column="pid">
+<generator class="foreign">
+<param name="property">usr</param>
+</generator>
+</id>
+
+<property name="add" column="address" length="10"/>
+<property name="city" column="city" length="10"/>
+<property name="state" column="state" length="10"/>
+<property name="country" column="country" length="10"/>
+<property name="mob" column="mob" length="10"/>
+
+<one-to-one name="usr"   class="User" cascade="all"></one-to-one>
+
+</class>
+</hibernate-mapping>

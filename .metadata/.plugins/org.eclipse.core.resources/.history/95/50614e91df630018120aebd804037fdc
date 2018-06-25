@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 30 May, 2018 11:45:24 AM by Hibernate Tools 5.3.0.Beta2 --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="bt" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.HibernateReverseEngineering.User" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="user">
+        <id name="userId" type="long">
+            <column name="User_Id"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="com.HibernateReverseEngineering.Milestone" embed-xml="true" fetch="select" insert="true" name="milestone" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="MileStone_ID"/>
+        </many-to-one>
+        <many-to-one class="com.HibernateReverseEngineering.Projects" embed-xml="true" fetch="select" insert="true" name="projects" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="Project_Id"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="firstName" optimistic-lock="true" type="string" unique="false">
+            <column name="First_Name"/>
+        </property>
+        <property generated="never" lazy="false" name="lastName" optimistic-lock="true" type="string" unique="false">
+            <column name="Last_Name"/>
+        </property>
+        <property generated="never" lazy="false" name="userPassword" optimistic-lock="true" type="string" unique="false">
+            <column name="UserPassword"/>
+        </property>
+        <property generated="never" lazy="false" name="userDesignation" optimistic-lock="true" type="string" unique="false">
+            <column name="User_Designation"/>
+        </property>
+        <property generated="never" lazy="false" name="userEmailId" optimistic-lock="true" type="string" unique="false">
+            <column name="User_Email_ID"/>
+        </property>
+        <property generated="never" lazy="false" name="username" optimistic-lock="true" type="string" unique="false">
+            <column name="Username"/>
+        </property>
+        <property generated="never" lazy="false" name="dateOfJoining" optimistic-lock="true" type="string" unique="false">
+            <column name="Date_Of_Joining"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="false" lazy="true" mutable="true" name="bugs" optimistic-lock="true" sort="unsorted" table="bugs_user">
+            <key on-delete="noaction">
+                <column name="User_ID_FK" not-null="true"/>
+            </key>
+            <many-to-many embed-xml="true" entity-name="com.HibernateReverseEngineering.Bug" not-found="exception" unique="false">
+                <column name="Bug_id_fk" not-null="true"/>
+            </many-to-many>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="false" lazy="true" mutable="true" name="events" optimistic-lock="true" sort="unsorted" table="event_user">
+            <key on-delete="noaction">
+                <column name="User_ID_FK" not-null="true"/>
+            </key>
+            <many-to-many embed-xml="true" entity-name="com.HibernateReverseEngineering.Event" not-found="exception" unique="false">
+                <column name="Event_id_fk" not-null="true"/>
+            </many-to-many>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="bugcomments" optimistic-lock="true" sort="unsorted" table="bugcomment">
+            <key on-delete="noaction">
+                <column name="User_ID"/>
+            </key>
+            <one-to-many class="com.HibernateReverseEngineering.Bugcomment" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="milestonecomments" optimistic-lock="true" sort="unsorted" table="milestonecomment">
+            <key on-delete="noaction">
+                <column name="User_ID"/>
+            </key>
+            <one-to-many class="com.HibernateReverseEngineering.Milestonecomment" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

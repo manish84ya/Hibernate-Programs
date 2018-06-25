@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 30 May, 2018 11:45:24 AM by Hibernate Tools 5.3.0.Beta2 --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="bt" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.HibernateReverseEngineering.Milestone" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="milestone">
+        <id name="mileStoneId" type="long">
+            <column name="MileStone_ID"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="com.HibernateReverseEngineering.Projects" embed-xml="true" fetch="select" insert="true" name="projects" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="Project_Id"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="milestoneFlag" optimistic-lock="true" type="string" unique="false">
+            <column name="Milestone_Flag"/>
+        </property>
+        <property generated="never" lazy="false" name="taskAssignDate" optimistic-lock="true" type="string" unique="false">
+            <column name="Task_Assign_Date"/>
+        </property>
+        <property generated="never" lazy="false" name="taskEndDate" optimistic-lock="true" type="string" unique="false">
+            <column name="Task_End_Date"/>
+        </property>
+        <property generated="never" lazy="false" name="taskName" optimistic-lock="true" type="string" unique="false">
+            <column name="Task_Name"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="milestonecomments" optimistic-lock="true" sort="unsorted" table="milestonecomment">
+            <key on-delete="noaction">
+                <column name="MileStone_ID"/>
+            </key>
+            <one-to-many class="com.HibernateReverseEngineering.Milestonecomment" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="affectedmilestones" optimistic-lock="true" sort="unsorted" table="affectedmilestone">
+            <key on-delete="noaction">
+                <column name="MileStone_ID"/>
+            </key>
+            <one-to-many class="com.HibernateReverseEngineering.Affectedmilestone" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="releasemilestones" optimistic-lock="true" sort="unsorted" table="releasemilestone">
+            <key on-delete="noaction">
+                <column name="MileStone_ID"/>
+            </key>
+            <one-to-many class="com.HibernateReverseEngineering.Releasemilestone" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="bugs" optimistic-lock="true" sort="unsorted" table="bug">
+            <key on-delete="noaction">
+                <column name="MileStone_ID"/>
+            </key>
+            <one-to-many class="com.HibernateReverseEngineering.Bug" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="users" optimistic-lock="true" sort="unsorted" table="user">
+            <key on-delete="noaction">
+                <column name="MileStone_ID"/>
+            </key>
+            <one-to-many class="com.HibernateReverseEngineering.User" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

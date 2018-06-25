@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate Mapping DTD 3.0//EN"
+"D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.SongsSinger">
+	<class name="Singer" table="singer">
+ 		<id name="sid" column="id"></id>
+		<property name="sname" column="Singer_name"></property>
+		<property name="sage" column="Singer_aga"></property>
+		<set name="Child" cascade="all" inverse="true">
+			<key column="fid"/>
+			<one-to-many class="Songs"/>
+		</set>
+	</class>
+</hibernate-mapping>

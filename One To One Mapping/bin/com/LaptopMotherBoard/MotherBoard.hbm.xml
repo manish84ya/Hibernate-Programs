@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.LaptopMotherBoard">
+<class name="MotherBoard" table="Mb">
+
+<id name="mid" column="mid">
+<generator class="foreign">
+<param name="property">lap</param>
+</generator>
+</id>
+
+<property name="cmpny" column="cmpny" length="10"/>
+<property name="mbit" column="mbit" length="10"/>
+
+<one-to-one name="lap"   class="Laptop" cascade="all"></one-to-one>
+
+</class>
+</hibernate-mapping>

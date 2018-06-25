@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.ProjectManagerToProject">
+<class name="ProjectManager" table="PM">
+<id name="pmid" column="pm_id" />
+<property name="Pname" column="p_name" length="10"/>
+<set name="Child" cascade="all" >
+ <key column="fid" />
+<one-to-many class="Project" />
+</set>
+ </class>
+</hibernate-mapping>
+

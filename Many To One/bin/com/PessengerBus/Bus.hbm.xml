@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.PessengerBus">
+
+<class name="Bus" table="Bus">
+<id name="bid" column="bus_id" />
+<property name="bname" column="bus_tra_name" length="10"/>
+<property name="sd" column="bus_start_from" length="10"/>
+<property name="ld" column="bus_last_dest" length="10"/>
+</class>
+</hibernate-mapping>

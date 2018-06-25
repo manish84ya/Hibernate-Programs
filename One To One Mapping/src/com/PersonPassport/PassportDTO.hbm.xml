@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.PersonPassport">
+<class name="PassportDTO" table="passport">
+
+<id name="pnumber" column="pnumber">
+<generator class="foreign">
+<param name="property">pp</param>
+</generator>
+</id>
+
+<property name="issueD" column="issue_date" length="10"/>
+<property name="expD" column="exp_date"  length="10"/>
+<property name="ppage" column="pass_pages" length="10"/>
+<one-to-one name="pp"   class="PersonDTO" cascade="all"></one-to-one>
+
+</class>
+</hibernate-mapping>
+
+

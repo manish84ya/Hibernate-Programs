@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.LaptopMotherBoard">
+<class name="Laptop" table="lap">
+<id name="lid" column="lid"/>
+<property name="lcname" column="lcname" length="10"/>
+<property name="Series" column="Series" length="10"/>
+
+</class>
+</hibernate-mapping>

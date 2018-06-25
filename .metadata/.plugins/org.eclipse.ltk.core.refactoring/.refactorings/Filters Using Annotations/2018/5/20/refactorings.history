@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Student.java&apos; to &apos;JPA FIlter/src/com.Filter&apos;&#x0D;&#x0A;- Original project: &apos;Filters Using Annotations&apos;&#x0D;&#x0A;- Destination element: &apos;JPA FIlter/src/com.Filter&apos;&#x0D;&#x0A;- Original element: &apos;com.FilterStudent.Student.java&apos;" description="Copy compilation unit" destination="=JPA FIlter/src&lt;com.Filter" element1="/src&lt;com.FilterStudent{Student.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1526714797411" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+<hibernate-mapping package="com.UserGroup">
+<class name="UserDTO" table="usr">
+<id name="uid" column="uid"/>
+<property name="username" column="uname"/>
+
+<property name="password" column="password"/>
+<property name="email" column="email"/>
+
+<set name="groups" cascade="all" table="user_grp">
+<key column="uid"></key>
+<many-to-many class="GroupDTO" column="gid"/>
+</set>
+</class>
+
+</hibernate-mapping>

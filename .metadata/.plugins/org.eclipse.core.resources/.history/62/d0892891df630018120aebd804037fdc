@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 30 May, 2018 11:45:24 AM by Hibernate Tools 5.3.0.Beta2 --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="bt" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.HibernateReverseEngineering.Bug" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="bug">
+        <id name="bugId" type="long">
+            <column name="Bug_ID"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="com.HibernateReverseEngineering.Milestone" embed-xml="true" fetch="select" insert="true" name="milestone" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="MileStone_ID"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="bugDescription" optimistic-lock="true" type="string" unique="false">
+            <column name="Bug_Description"/>
+        </property>
+        <property generated="never" lazy="false" name="bugTitle" optimistic-lock="true" type="string" unique="false">
+            <column name="Bug_Title"/>
+        </property>
+        <property generated="never" lazy="false" name="dueOn" optimistic-lock="true" type="string" unique="false">
+            <column name="Due_On"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="bugStatuses" optimistic-lock="true" sort="unsorted" table="bug_status">
+            <key on-delete="noaction">
+                <column name="Bug_ID"/>
+            </key>
+            <one-to-many class="com.HibernateReverseEngineering.BugStatus" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="bugcomments" optimistic-lock="true" sort="unsorted" table="bugcomment">
+            <key on-delete="noaction">
+                <column name="Bug_ID"/>
+            </key>
+            <one-to-many class="com.HibernateReverseEngineering.Bugcomment" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="flags" optimistic-lock="true" sort="unsorted" table="flag">
+            <key on-delete="noaction">
+                <column name="Bug_ID"/>
+            </key>
+            <one-to-many class="com.HibernateReverseEngineering.Flag" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="false" lazy="true" mutable="true" name="users" optimistic-lock="true" sort="unsorted" table="bugs_user">
+            <key on-delete="noaction">
+                <column name="Bug_id_fk" not-null="true"/>
+            </key>
+            <many-to-many embed-xml="true" entity-name="com.HibernateReverseEngineering.User" not-found="exception" unique="false">
+                <column name="User_ID_FK" not-null="true"/>
+            </many-to-many>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="reproducibles" optimistic-lock="true" sort="unsorted" table="reproducible">
+            <key on-delete="noaction">
+                <column name="Bug_ID"/>
+            </key>
+            <one-to-many class="com.HibernateReverseEngineering.Reproducible" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="affectedmilestones" optimistic-lock="true" sort="unsorted" table="affectedmilestone">
+            <key on-delete="noaction">
+                <column name="Bug_ID"/>
+            </key>
+            <one-to-many class="com.HibernateReverseEngineering.Affectedmilestone" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="classifications" optimistic-lock="true" sort="unsorted" table="classification">
+            <key on-delete="noaction">
+                <column name="Bug_ID"/>
+            </key>
+            <one-to-many class="com.HibernateReverseEngineering.Classification" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="severities" optimistic-lock="true" sort="unsorted" table="severity">
+            <key on-delete="noaction">
+                <column name="Bug_ID"/>
+            </key>
+            <one-to-many class="com.HibernateReverseEngineering.Severity" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="resolutions" optimistic-lock="true" sort="unsorted" table="resolution">
+            <key on-delete="noaction">
+                <column name="Bug_ID"/>
+            </key>
+            <one-to-many class="com.HibernateReverseEngineering.Resolution" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="modules" optimistic-lock="true" sort="unsorted" table="module">
+            <key on-delete="noaction">
+                <column name="Bug_ID"/>
+            </key>
+            <one-to-many class="com.HibernateReverseEngineering.Module" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="releasemilestones" optimistic-lock="true" sort="unsorted" table="releasemilestone">
+            <key on-delete="noaction">
+                <column name="Bug_ID"/>
+            </key>
+            <one-to-many class="com.HibernateReverseEngineering.Releasemilestone" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

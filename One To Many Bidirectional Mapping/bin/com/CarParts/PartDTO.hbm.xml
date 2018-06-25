@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.CarParts">
+<class name="PartDTO" table ="Parts">
+<id name="pid" column="pid"/>
+<property name="pname" column="pname"></property>
+
+<property name="ptype" column="ptype"></property>
+<many-to-one name="obj" column="fid" cascade="all"/>
+ </class>
+</hibernate-mapping>

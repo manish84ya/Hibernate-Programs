@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.Filter_Student">
+	<class name="Student" table="student">
+		<id name="id" type="long" column="std_No">
+			<generator class="increment" />
+		</id>
+		<property name="name" column="std_Name" not-null="true" />
+		<property name="degree" column="std_Degree" />
+		<property name="phone" column="std_Phone" />
+		<property name="status" column="std_status" />
+
+		<filter name="statusFilter" condition="std_status like :status" />
+		  <filter name="studentDegree" condition="std_Degree like '%M%'"></filter>
+        <filter name="studentPhone" condition="std_Phone = :phone"></filter>
+	</class>
+ <filter-def name="studentDegree"/>
+	<filter-def name="statusFilter">
+		<filter-param name="status" type="string" />
+		
+	</filter-def>
+	<filter-def name="studentPhone">
+		<filter-param name="phone" type="string" />
+		
+	</filter-def>
+
+</hibernate-mapping>

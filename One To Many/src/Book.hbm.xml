@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+<hibernate-mapping>
+<class name="com.BookAuthor.Book" table="Book">
+
+<id name="bid" column="Book_id"/>
+<property name="bname" column="Book_Name"/>
+<property name="ISBN" column="ISBN"/>
+<set name="ch" cascade="all">
+<key column="fid"/>
+<one-to-many class="com.BookAuthor.Author"/>
+
+</set>
+</class>
+</hibernate-mapping>
+ 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/CRUD Operations Using Annotations/src/com/Save_Operation_Using_Annotations/TestSaveOperations.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.Save_Operation_Using_Annotations.TestSaveOperations"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="CRUD Operations Using Annotations"/>
+</launchConfiguration>

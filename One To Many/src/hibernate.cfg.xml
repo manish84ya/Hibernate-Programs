@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+          "D:/Programs/Hibernate/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+
+<property name = "connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name = "dialect">org.hibernate.dialect.MySQLDialect</property>
+<property name = "connection.url">jdbc:mysql://localhost:3306/mapping</property>
+<property name = "connection.username">root</property>
+<property name = "connection.password">root</property>
+<property name="show_sql">true</property>
+<property name="hbm2ddl.auto">update</property>  
+ 
+<mapping resource="Customer.hbm.xml"></mapping>
+<mapping resource="Vendor.hbm.xml"></mapping>
+
+<mapping resource="Book.hbm.xml"></mapping>
+<mapping resource="Author.hbm.xml"></mapping>
+
+<mapping resource="Bank.hbm.xml"></mapping>
+<mapping resource="BankCustomer.hbm.xml"></mapping>
+
+<mapping resource="Department.hbm.xml"></mapping>
+<mapping resource="Employee.hbm.xml"></mapping>
+
+<mapping resource="Cart.hbm.xml"></mapping>
+<mapping resource="Product.hbm.xml"></mapping>
+
+<mapping resource="Teacher.hbm.xml"></mapping>
+<mapping resource="Classes.hbm.xml"></mapping>
+
+<mapping resource="Question.hbm.xml"></mapping>
+<mapping resource="Answer.hbm.xml"></mapping>
+
+<mapping resource="Person.hbm.xml"></mapping>
+<mapping resource="Phone.hbm.xml"></mapping>
+
+<mapping resource="Team.hbm.xml"></mapping>
+<mapping resource="Player.hbm.xml"></mapping>
+
+<mapping resource="Employee1.hbm.xml"></mapping>
+<mapping resource="Certificate.hbm.xml"></mapping>
+
+<mapping resource="com/DirectorMovies/Director.hbm.xml"></mapping>
+<mapping resource="com/DirectorMovies/Movies.hbm.xml"></mapping>
+
+<mapping resource="com/ProjectManagerToProject/ProjectManager.hbm.xml"></mapping>
+<mapping resource="com/ProjectManagerToProject/Project.hbm.xml"></mapping>
+
+
+<mapping resource="com/CountryStates/Country.hbm.xml"></mapping>
+<mapping resource="com/CountryStates/States.hbm.xml"></mapping>
+
+<mapping resource="com/ArtistSongs/Artist.hbm.xml"></mapping>
+<mapping resource="com/ArtistSongs/Songs.hbm.xml"></mapping>
+
+<mapping resource="com/AtmCust/AtmDTO.hbm.xml"></mapping>
+<mapping resource="com/AtmCust/CustDTO.hbm.xml"></mapping>
+
+<mapping resource="com/LightSwitch/LightDTO.hbm.xml"></mapping>
+<mapping resource="com/LightSwitch/SwitchDTO.hbm.xml"></mapping>
+
+</session-factory>
+</hibernate-configuration>
+
+
+
+
+

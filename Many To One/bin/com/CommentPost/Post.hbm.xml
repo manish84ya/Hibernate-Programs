@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.CommentPost">
+
+<class name="Post" table="post">
+<id name="pid" column="post_Id" />
+<property name="ptital" column="post_tital" length="10"/>
+<property name="pdesc" column="desc" length="10"/>
+
+</class>
+</hibernate-mapping>

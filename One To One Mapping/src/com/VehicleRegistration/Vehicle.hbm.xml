@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.VehicleRegistration">
+<class name="Vehicle" table="Vehicle">
+
+<id name="regnum" column="regnum">
+<generator class="foreign">
+<param name="property">reg</param>
+</generator>
+</id>
+
+<property name="vtype" column="Vehicle_type" length="10"/>
+<property name="vname" column="Vehicle_name" length="10"/>
+
+<one-to-one name="reg"   class="Registration" cascade="all"></one-to-one>
+
+</class>
+</hibernate-mapping>
+	

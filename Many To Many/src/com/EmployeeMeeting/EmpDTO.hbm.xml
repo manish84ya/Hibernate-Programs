@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+<hibernate-mapping package="com.EmployeeMeeting">
+<class name="EmpDTO" table="E1">
+<id name="eid" column="eid"/>
+<property name="ename" column="e_name"/>
+<property name="esal"></property>
+<set name="Meeting" cascade="all" table="emp_meet">
+<key column="eid"></key>
+<many-to-many class="MeetingDTO" column="mid"/>
+</set>
+</class>
+
+</hibernate-mapping>

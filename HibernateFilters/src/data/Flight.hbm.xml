@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping package="data">  
+<class name="Flight" table="hibernate_filter_demo.flight_db">
+<id name="id" type = "int" column="id">
+<generator class = "increment"/>
+</id>
+<property name="flightNo" type="string" length="10" column="flight_No"/>
+<property name="source" type="string" length="15" column="source"/>
+<property name="destination" type="string" length="15" column="destination"/>  
+<property name="status" type="string" length="20" column="status"/>
+<filter name="statusFilter" condition=":statusParam=status"/>  
+</class>  
+<filter-def name="statusFilter">
+<filter-param name="statusParam" type="string"/>
+</filter-def>  
+</hibernate-mapping>

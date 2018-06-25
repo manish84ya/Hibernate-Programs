@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+<hibernate-mapping package="com.StudentClassPlace">
+<class name="PlaceDTO" table="place">
+<id name="pid" column="pid"/>
+<property name="pname" column="place_name"/>
+
+<set name="Courses" cascade="all" table="Student_courses_place">
+<key column="pid"></key>
+<many-to-many class="CoDTO" column="cid"/>
+</set>
+</class>
+
+</hibernate-mapping>

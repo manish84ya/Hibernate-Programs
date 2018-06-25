@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping>
+<class name="com.QuestionAnswer.Question" table="Question">
+
+<id name="id" column="q_id" />
+
+<property name="qname" column="q_name" length="10"/>
+
+<set name="Child" cascade="all" >
+ <key column="fid" />
+<one-to-many class="com.QuestionAnswer.Answers" />
+ </set>
+ 
+
+</class>
+</hibernate-mapping>
+

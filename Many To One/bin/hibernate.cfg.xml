@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+          "D:/Programs/Hibernate/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+
+<property name = "connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name = "dialect">org.hibernate.dialect.MySQLDialect</property>
+<property name = "connection.url">jdbc:mysql://localhost:3306/ManyToOne</property>
+<property name = "connection.username">root</property>
+<property name = "connection.password">root</property>
+<property name="show_sql">true</property>
+<property name="hbm2ddl.auto">update</property>  
+ 
+<mapping resource="com/CustomerVendor/Customer.hbm.xml"></mapping>
+<mapping resource="com/CustomerVendor/Vendor.hbm.xml"></mapping>
+
+<mapping resource="com/StudentAddress/Student.hbm.xml"></mapping>
+<mapping resource="com/StudentAddress/Address.hbm.xml"></mapping>
+
+<mapping resource="com/PatientDoctor/Doctor.hbm.xml"></mapping>
+<mapping resource="com/PatientDoctor/Patient.hbm.xml"></mapping>
+
+<mapping resource="com/VehicleOwner/Vehicle.hbm.xml"></mapping>
+<mapping resource="com/VehicleOwner/Owner.hbm.xml"></mapping>
+
+
+
+<mapping resource="com/CommentPost/Comment.hbm.xml"></mapping>
+<mapping resource="com/CommentPost/Post.hbm.xml"></mapping>
+
+<mapping resource="com/FlightAirport/Flight.hbm.xml"></mapping>
+<mapping resource="com/FlightAirport/Airport.hbm.xml"></mapping>
+
+<mapping resource="com/SongsArtist/Songs.hbm.xml"></mapping>
+<mapping resource="com/SongsArtist/Artist.hbm.xml"></mapping>
+
+
+<mapping resource="com/ChildrenMother/Children.hbm.xml"></mapping>
+<mapping resource="com/ChildrenMother/Mother.hbm.xml"></mapping>
+
+<mapping resource="com/BookStudent/Book.hbm.xml"></mapping>
+<mapping resource="com/BookStudent/BStudent.hbm.xml"></mapping>
+
+<mapping resource="com/PessengerTrain/Pessengers.hbm.xml"></mapping>
+<mapping resource="com/PessengerTrain/Train.hbm.xml"></mapping>
+
+<mapping resource="com/CustomerBank/Customer1.hbm.xml"></mapping>
+<mapping resource="com/CustomerBank/Bank.hbm.xml"></mapping>
+
+<mapping resource="com/FurnitureCarpenter/Carpenter.hbm.xml"></mapping>
+<mapping resource="com/FurnitureCarpenter/Furniture.hbm.xml"></mapping>
+
+<mapping resource="com/VillageDistict/Village.hbm.xml"></mapping>
+<mapping resource="com/VillageDistict/Distict.hbm.xml"></mapping>
+
+<mapping resource="com/PessengerBus/Pessenger.hbm.xml"></mapping>
+<mapping resource="com/PessengerBus/Bus.hbm.xml"></mapping>
+
+<mapping resource="com/PagesBook/BookDTO.hbm.xml"></mapping>
+<mapping resource="com/PagesBook/PagesDTO.hbm.xml"></mapping>
+
+<mapping resource="com/MenCloths/MenDTO.hbm.xml"></mapping>
+<mapping resource="com/MenCloths/ClothsDTO.hbm.xml"></mapping>
+
+</session-factory>
+</hibernate-configuration>
+
+
+
+
+

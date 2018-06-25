@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+
+<hibernate-mapping package="com.StockCategory">
+<class name="StockDTO" table="stock">
+<id name="stockId" column="stockId"/>
+<property name="stockCode" column="stockCode"/>
+<property name="stockName" column="stockName"/>
+
+<set name="Category" cascade="all" table="stock_category">
+<key column="stockId"></key>
+<many-to-many class="CategoryDTO" column="categoryId"/>
+</set>
+</class>
+
+</hibernate-mapping>

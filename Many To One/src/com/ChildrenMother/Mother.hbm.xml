@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.ChildrenMother">
+
+<class name="Mother" table="Mother">
+<id name="mid" column="m_Id" />
+<property name="mname" column="mother_Name" length="10"/>
+
+</class>
+</hibernate-mapping>
+	

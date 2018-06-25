@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+<hibernate-mapping package="com.BankCustomer">
+<class name="CustomerDTO" table="customer">
+<id name="cid" column="cid"/>
+<property name="cname" column="cust_name"/>
+<property name="acc"></property>
+<set name="Bank" cascade="all" table="Customer_Bank">
+<key column="cid"></key>
+<many-to-many class="BankDTO" column="bid"/>
+</set>
+</class>
+
+</hibernate-mapping>

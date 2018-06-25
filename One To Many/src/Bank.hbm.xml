@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping>
+<class name="com.BankCustomer.Bank" table="Bank">
+
+<id name="Bid" column="Bank_id" />
+
+<property name="Bname" column="Bank_name" length="10"/>
+
+<set name="ch" cascade="all" >
+ <key column="fid" />
+<one-to-many class="com.BankCustomer.BankCustomer" />
+</set>
+ <filter name="Bank_name_filter" condition="Bank_name like :B_name" />
+
+</class>
+<filter-def name="Bank_name_filter">
+		<filter-param name="B_name" type="string" />
+	</filter-def>
+
+</hibernate-mapping>
+

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.DirectorMovies">
+<class name="Director" table="director">
+<id name="did" column="dir_id" />
+<property name="dname" column="dir_name" length="10"/>
+<set name="child" cascade="all" >
+ <key column="fid" />
+<one-to-many class="Movies" />
+</set>
+ </class>
+</hibernate-mapping>
+

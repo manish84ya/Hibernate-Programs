@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.CustomerBank">
+
+<class name="Customer1" table="Custbank">
+<id name="Cid" column="c_Id" />
+<property name="Cname" column="C_Name" length="10"/>
+
+<property name="Acc" column="C_Acc" length="10"/>
+<many-to-one name="obj" column="fid" class="Bank" cascade="all"/>
+
+</class>
+</hibernate-mapping>
+

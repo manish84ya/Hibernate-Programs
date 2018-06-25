@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+<hibernate-mapping package="com.SubjectBranch">
+<class name="BranchDTO" table="branch">
+<id name="bid" column="bid"/>
+<property name="bname" column="branch_name"/>
+
+<set name="Subject" cascade="all" table="Subject_branches">
+<key column="bid"></key>
+<many-to-many class="SubjectDTO" column="sid"/>
+</set>
+</class>
+</hibernate-mapping>

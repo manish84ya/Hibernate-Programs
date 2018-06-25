@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 30 May, 2018 11:45:24 AM by Hibernate Tools 5.3.0.Beta2 --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="bt" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.HibernateReverseEngineering.Event" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="event">
+        <id name="eventId" type="long">
+            <column name="Event_ID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="duration" optimistic-lock="true" type="string" unique="false">
+            <column name="Duration"/>
+        </property>
+        <property generated="never" lazy="false" name="eventTitle" optimistic-lock="true" type="string" unique="false">
+            <column name="Event_Title"/>
+        </property>
+        <property generated="never" lazy="false" name="location" optimistic-lock="true" type="string" unique="false">
+            <column name="Location"/>
+        </property>
+        <property generated="never" lazy="false" name="scheduleOn" optimistic-lock="true" type="string" unique="false">
+            <column name="Schedule_On"/>
+        </property>
+        <property generated="never" lazy="false" name="startTime" optimistic-lock="true" type="string" unique="false">
+            <column name="Start_Time"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="false" lazy="true" mutable="true" name="admins" optimistic-lock="true" sort="unsorted" table="event_admin">
+            <key on-delete="noaction">
+                <column name="Event_id_fk" not-null="true"/>
+            </key>
+            <many-to-many embed-xml="true" entity-name="com.HibernateReverseEngineering.Admin" not-found="exception" unique="false">
+                <column name="admin_id_fk" not-null="true"/>
+            </many-to-many>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="false" lazy="true" mutable="true" name="users" optimistic-lock="true" sort="unsorted" table="event_user">
+            <key on-delete="noaction">
+                <column name="Event_id_fk" not-null="true"/>
+            </key>
+            <many-to-many embed-xml="true" entity-name="com.HibernateReverseEngineering.User" not-found="exception" unique="false">
+                <column name="User_ID_FK" not-null="true"/>
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

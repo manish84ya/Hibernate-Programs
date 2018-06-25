@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.DirectorMovies">
+<class name="Movies" table="Movies">
+
+<id name="mid" column="m_id" />
+<property name="mname" column="m_name" length="10"/>
+<property name="msize" column="m_size" length="10"/>
+<property name="fid" column="fid" length="10"/>
+</class>
+</hibernate-mapping>
+

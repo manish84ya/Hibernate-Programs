@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;JPA Mapping/src/com.OneToMany&apos;&#x0D;&#x0A;- Original project: &apos;One To Many Mapping Using Annotations&apos;&#x0D;&#x0A;- Destination element: &apos;JPA Mapping/src/com.OneToMany&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     com.VendorCustomer.Customer.java&#x0D;&#x0A;     com.VendorCustomer.Vendor.java" description="Copy compilation units" destination="=JPA Mapping/src&lt;com.OneToMany" element1="/src&lt;com.VendorCustomer{Customer.java" element2="/src&lt;com.VendorCustomer{Vendor.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1526723517449" units="2" version="1.0"/>
+</session>

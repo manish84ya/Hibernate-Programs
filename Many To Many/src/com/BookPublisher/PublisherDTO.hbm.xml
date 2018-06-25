@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+<hibernate-mapping package="com.BookPublisher">
+<class name="PublisherDTO" table="Publisher">
+<id name="pid" column="pid"/>
+<property name="pname" column="pub_name"/>
+
+<set name="Book" cascade="all" table="Book_Publisher">
+<key column="pid"></key>
+<many-to-many class="BookDTO" column="bid"/>
+</set>
+</class>
+
+</hibernate-mapping>

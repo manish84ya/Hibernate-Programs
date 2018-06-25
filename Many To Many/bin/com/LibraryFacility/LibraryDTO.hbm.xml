@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.LibraryFacility">
+<class name="LibraryDTO" table="library">
+<id name="lid" column="lid"/>
+<property name="lname" column="lname"/>
+
+<set name="Facility" cascade="all" table="lib_facility">
+<key column="lid"/>
+<many-to-many class="FacilityDTO" column="fcode"></many-to-many>
+</set>
+</class>
+</hibernate-mapping>

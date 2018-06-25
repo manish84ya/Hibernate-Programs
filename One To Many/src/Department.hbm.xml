@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+
+  
+<hibernate-mapping>
+<class name="com.DepartmentEmployee.Department" table="dept">
+
+<id name="did" column="dept_id" />
+
+<property name="dname" column="dept_name" length="10"/>
+
+<set name="child" cascade="all" >
+ <key column="fid" />
+<one-to-many class="com.DepartmentEmployee.Employee" />
+ </set>
+ 
+
+</class>
+</hibernate-mapping>
+

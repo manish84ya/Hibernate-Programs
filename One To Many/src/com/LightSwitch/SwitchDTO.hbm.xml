@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate Mapping DTD 3.0//EN"
+"D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.LightSwitch">
+<class name="SwitchDTO" table="Switch">
+<id name="sid" column="switch_id"></id>
+<property name="stype" column="switch_Type"></property>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ <hibernate-mapping package="com.CarEngine">
+<class name="Car" table="Car">
+<id name="cid" column="cid"/>
+<property name="cname" column="cname" length="10"/>
+<property name="coname" column="coname" length="10"/>
+</class>
+</hibernate-mapping>

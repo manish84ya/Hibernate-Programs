@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping>
+<class name="com.DepartmentEmployee.Employee" table="emp">
+
+<id name="eId" column="emp_id" />
+<property name="eName" column="Emp_name" length="10"/>
+<property name="fid" column="fid" length="10"/>
+</class>
+</hibernate-mapping>
+	

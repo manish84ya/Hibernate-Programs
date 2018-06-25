@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.CarShowroom">
+<class name="ShowroomDTO" table="Showroom">
+
+<id name="sid" column="sid" />
+<property name="sname" column="sname" length="10"/>
+<property name="sloc" column="slocation" length="10"/>
+
+<set name="Child" cascade="all" inverse="true">
+ <key column="fid" />
+<one-to-many class="Car1DTO" />
+ </set>
+ </class>
+</hibernate-mapping>
+
+	

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.VendorCustomer">
+<class name="Vendor" table="vendor">
+
+<id name="vid" column="vendid" />
+<property name="vname" column="vendname" length="10"/>
+
+<set name="Child" cascade="all" inverse="false">
+ <key column="fid" />
+<one-to-many class="Customer" />
+ </set>
+ </class>
+</hibernate-mapping>
+

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.BookPages">
+<class name="PagesDTO" table ="page">
+<id name="cpid" column="pid"/>
+<property name="pno" column="pno"></property>
+<many-to-one name="obj" column="fid" cascade="all"/>
+ </class>
+</hibernate-mapping>

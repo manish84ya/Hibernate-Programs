@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.StudentAddress">
+<class name="StudentDTO" table="student">
+
+<id name="sid" column="s_id" />
+
+<property name="sname" column="s_name" length="10"/>
+</class>
+</hibernate-mapping>
+

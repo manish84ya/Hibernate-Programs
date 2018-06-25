@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.PersonAdhar">
+<class name="PerDTO" table="peruid">
+
+<id name="pid" column="pid">
+<generator class="foreign">
+<param name="property">adr</param>
+</generator>
+</id>
+
+<property name="pname" column="person_name" length="10"/>
+
+<one-to-one name="adr"   class="AdharDTO" cascade="all"></one-to-one>
+
+</class>
+</hibernate-mapping>
+ 

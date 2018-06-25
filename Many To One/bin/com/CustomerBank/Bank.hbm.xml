@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping package="com.CustomerBank">
+<class name="Bank" table="Bank">
+<id name="Bid" column="Bank_id" />
+<property name="Bname" column="Bank_name" length="10"/>
+</class>
+</hibernate-mapping>
+

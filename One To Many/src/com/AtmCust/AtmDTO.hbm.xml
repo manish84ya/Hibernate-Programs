@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate Mapping DTD 3.0//EN"
+"D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.AtmCust">
+<class name="AtmDTO" table="ATM">
+<id name="Aid" column="Atm_id"></id>
+
+<set name="Child" cascade="all">
+<key column="fid"></key>
+<one-to-many class="CustDTO"></one-to-many>
+</set>
+
+<property name="aname" column="Atm_name"></property>
+<property name="aplace" column="Atm_place"></property>
+</class>
+</hibernate-mapping>

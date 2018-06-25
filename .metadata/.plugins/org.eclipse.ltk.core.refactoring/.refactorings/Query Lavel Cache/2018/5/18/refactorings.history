@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;CustomerDTO.java&apos; to &apos;Named Query/src/com.NamedQueryPrograms&apos;&#x0D;&#x0A;- Original project: &apos;Query Lavel Cache&apos;&#x0D;&#x0A;- Destination element: &apos;Named Query/src/com.NamedQueryPrograms&apos;&#x0D;&#x0A;- Original element: &apos;com.QueryLevelCache.CustomerDTO.java&apos;" description="Copy compilation unit" destination="=Named Query/src&lt;com.NamedQueryPrograms" element1="/src&lt;com.QueryLevelCache{CustomerDTO.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1525237965880" units="1" version="1.0"/>
+</session>

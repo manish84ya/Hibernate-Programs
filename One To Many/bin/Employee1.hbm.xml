@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">   
+ 
+<hibernate-mapping>
+
+<class name="com.EmpCertificate.Employee1" table="Empcert">
+<id name="eId" column="eid" />
+<property name="eName" column="e_name" length="10"/>
+<set name="Child" cascade="all" >
+<key column="fid" />
+<one-to-many class="com.EmpCertificate.Certificate" />
+</set>
+</class>
+</hibernate-mapping>

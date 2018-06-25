@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"D:/Programs/Hibernate/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.EmployeeCertificate">
+<class name="CertificateDTO" table="cert">
+<id name="cid" column="Cert_id"/>
+<property name="cname" column="Cert_name"/>
+<property name="yoc" column="Cert_comp_year"/>
+
+<set name="Employee" cascade="all" table="Emp_cert">
+<key column="cid"/>
+<many-to-many class="EmployeeDTO" column="eid"></many-to-many>
+</set>
+</class>
+</hibernate-mapping>
